@@ -12,7 +12,11 @@ def bubleSort(mass):
 
 
 if __name__ == '__main__':
+    print("Введите количество элементов в массиве: ")
     n = int(input())
+    print("Введите параметр сортировки: \n0 - по убыванию \n1 - по возрастанию")
+    p = int(input())
+
     mass = [0] * n
 
     for i in range(n):

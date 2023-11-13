@@ -1,13 +1,21 @@
 import random
 
 
-def bubleSort(mass):
-    for i in range(len(mass)-1):
-        for j in range(len(mass)-i-1):
-            if mass[j] > mass[j+1]:
-                temp = mass[j]
-                mass[j] = mass[j+1]
-                mass[j+1] = temp
+def bubleSort(mass, param):
+    if param == 1:
+        for i in range(len(mass)-1):
+            for j in range(len(mass)-i-1):
+                if mass[j] > mass[j+1]:
+                    temp = mass[j]
+                    mass[j] = mass[j+1]
+                    mass[j+1] = temp
+    if param == 0:
+        for i in range(len(mass)-1):
+            for j in range(len(mass)-i-1):
+                if mass[j] < mass[j+1]:
+                    temp = mass[j]
+                    mass[j] = mass[j+1]
+                    mass[j+1] = temp
     return mass
 
 
@@ -23,5 +31,5 @@ if __name__ == '__main__':
         mass[i] = int(random.random() * 100)
 
     print(mass)
-    sortedMass = bubleSort(mass)
+    sortedMass = bubleSort(mass, p)
     print(sortedMass)
